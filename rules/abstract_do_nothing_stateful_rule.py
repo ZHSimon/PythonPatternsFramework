@@ -14,8 +14,9 @@
 # 	@Override
 # 	public abstract String toString();
 # }
-from rules.abstract_stateful_rule import TGAbstractStatefulRule
 from abc import abstractmethod
+
+from rules.abstract_stateful_rule import TGAbstractStatefulRule
 
 
 class TGAbstractDoNothingStatefulRule(TGAbstractStatefulRule):

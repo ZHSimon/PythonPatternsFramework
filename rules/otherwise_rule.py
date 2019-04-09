@@ -16,8 +16,9 @@
 # 	public abstract String toString();
 # }
 #
-from rules.abstract_rule import TGAbstractRule
 from abc import abstractmethod
+
+from rules.abstract_rule import TGAbstractRule
 
 
 class TGAbstractOtherwiseRule(TGAbstractRule):

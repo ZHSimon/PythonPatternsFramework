@@ -115,6 +115,7 @@
 # 		return results;
 # 	}
 
+from patterns.do_nothing_executable import DEFAULT as DO_NOTHING
 # 	@Override
 # 	public <I, IC extends Collection<? extends I>> List<I> select(IC items, TGMatcher<? super I> matcher) {
 # 		List<I> results = new ArrayList<>();
@@ -127,7 +128,6 @@
 # 	}
 # }
 from .abstract_enumerator import TGEnumerator
-from patterns.do_nothing_executable import DEFAULT as DO_NOTHING
 
 
 class TGBasicEnumerator(TGEnumerator):

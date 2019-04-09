@@ -16,8 +16,9 @@
 # 	}
 # }
 
-from rules.abstract_applicable import TGAbstractApplicable
 from abc import abstractmethod
+
+from rules.abstract_applicable import TGAbstractApplicable
 
 
 class TGAbstractRule(TGAbstractApplicable):

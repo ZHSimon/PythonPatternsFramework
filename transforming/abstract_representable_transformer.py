@@ -55,9 +55,10 @@
 #
 # 	protected abstract T getUnspecifiedTransformation();
 # }
+from abc import abstractmethod
+
 from enumeration.enums.abstract_representable import TGAbstractRepresentable
 from transforming.abstract_base_transformer import TGAbstractBaseTransformer
-from abc import abstractmethod
 
 
 def create_conversion_map(known_values):

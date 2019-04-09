@@ -43,10 +43,11 @@
 # 	}
 #
 # }
-from eventhandling.eventmonitoring.abstract_event_monitor import TGAbstractEventMonitor
-from enumeration.matcher.abstract_matcher import TGAbstractMatcher
-from enumeration.enumerator.basic_enumerator import TGBasicEnumerator
 from abc import abstractmethod
+
+from enumeration.enumerator.basic_enumerator import TGBasicEnumerator
+from enumeration.matcher.abstract_matcher import TGAbstractMatcher
+from eventhandling.eventmonitoring.abstract_event_monitor import TGAbstractEventMonitor
 
 
 # class EventsPendingMatcher(TGAbstractMatcher):
@@ -59,6 +60,7 @@ from abc import abstractmethod
 
 def events_pending_is_match(self, listener):
     return self.event_monitor.is_pending(listener.get_event_id())
+
 
 # class IsListeningToMatcher(TGAbstractMatcher):
 #     def __init__(self, event_id):

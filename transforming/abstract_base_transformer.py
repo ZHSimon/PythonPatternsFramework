@@ -97,6 +97,7 @@
 # 	}
 # }
 from abc import ABC, abstractmethod
+
 from enumeration.enumerator.basic_enumerator import TGBasicEnumerator
 
 

@@ -26,6 +26,7 @@
 # 	}
 # }
 from abc import abstractmethod
+
 from rules.abstract_applicable import TGAbstractApplicable
 
 
@@ -45,4 +46,3 @@ class TGAbstractStatefulRule(TGAbstractApplicable):
     @abstractmethod
     def is_applicable(self, context=None):
         pass
-

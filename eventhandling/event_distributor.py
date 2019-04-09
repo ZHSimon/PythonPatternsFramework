@@ -168,11 +168,12 @@
 # 	}
 # }
 
-from eventhandling.abstract_publisher import TGAbstractPublisher
-from eventhandling.value_change import TGValueChange
-from eventhandling.event import TGEvent
-from listeners.abstract_listener_registry import TGAbstractListenerRegistry
 from collections import OrderedDict
+
+from eventhandling.abstract_publisher import TGAbstractPublisher
+from eventhandling.event import TGEvent
+from eventhandling.value_change import TGValueChange
+from listeners.abstract_listener_registry import TGAbstractListenerRegistry
 
 MAX_UNHEARD_EVENTS = 10
 UNPUBLISHED = "UNPUBLISHED"

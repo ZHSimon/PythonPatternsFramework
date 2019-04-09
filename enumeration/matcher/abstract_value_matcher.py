@@ -28,8 +28,9 @@
 # 		return element != null && valuesBeingMatched.contains(getValueToMatchFrom(element));
 # 	}
 # }
-from enumeration.matcher.abstract_matcher import TGAbstractMatcher
 from abc import abstractmethod
+
+from enumeration.matcher.abstract_matcher import TGAbstractMatcher
 
 
 class TGAbstractValueMatcher(TGAbstractMatcher):

@@ -1,6 +1,7 @@
+import logging
+
 from factories.abstract_factory import TGAbstractFactory
 from rules.logging_rule_engine import TGLoggingRuleEngine
-import logging
 
 
 class TGLoggingRuleEngineFactory(TGAbstractFactory):
