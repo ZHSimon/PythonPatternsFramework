@@ -92,7 +92,7 @@
 import logging
 from abc import ABC
 
-from application.handler_map_factory import TGHandlerMapFactory
+from thraxisgamespatterns.application.handler_map_factory import TGHandlerMapFactory
 from eventhandling.event_distributor import TGEventDistributor
 from factories.logging_rule_engine_factory import TGLoggingRuleEngineFactory
 

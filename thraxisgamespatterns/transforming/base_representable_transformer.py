@@ -48,7 +48,7 @@
 # 		return unspecifiedValue;
 # 	}
 # }
-from transforming.abstract_representable_transformer import TGAbstractRepresentableTransformer
+from thraxisgamespatterns.transforming import TGAbstractRepresentableTransformer
 
 
 def new_instance(known_values, unknown_value, unspecified_value=None):
