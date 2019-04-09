@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="thraxisgamespatterns",
-    version="0.1.4",
+    version="0.1.5",
     author="Zack Simon",
     author_email="zack.simon+thraxisgames@gmail.com",
     description="A series of python programming patterns to extend",
