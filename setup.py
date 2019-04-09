@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="thraxisgamespatterns",
-    version="0.0.3dev",
+    version="0.0.4",
     author="Zack Simon",
     author_email="zack.simon+thraxisgames@gmail.com",
     description="A series of python programming patterns to extend and ease implementation",
@@ -16,6 +16,7 @@ setuptools.setup(
     packages=setuptools.find_namespace_packages(include='thraxisgamespatterns.*'),
     classifiers=[
         "Programming Language :: Python :: 3",
+        'License :: OSI Approved :: MIT License',
         "Operating System :: OS Independent",
     ],
 )
