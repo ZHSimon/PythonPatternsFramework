@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="tgpatternsframework-zacksimon",
-    version="0.1",
+    version="0.1.2",
     author="Zack Simon",
     author_email="zack.simon+thraxisgames@gmail.com",
     description="A series of python programming patterns to extend",
