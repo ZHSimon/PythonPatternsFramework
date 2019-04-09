@@ -1,1 +1,1 @@
-name = "tgpatternsframework"
+name = "patternsframework"

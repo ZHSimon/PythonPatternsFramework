@@ -5,8 +5,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="tgpatternsframework-zacksimon",
-    version="0.1.3",
+    name="patternsframework_thraxisgames",
+    version="0.1.4",
     author="Zack Simon",
     author_email="zack.simon+thraxisgames@gmail.com",
     description="A series of python programming patterns to extend",
