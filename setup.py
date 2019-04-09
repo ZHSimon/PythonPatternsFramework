@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="patternsframework_thraxisgames",
+    name="thraxisgamespatterns",
     version="0.1.4",
     author="Zack Simon",
     author_email="zack.simon+thraxisgames@gmail.com",
