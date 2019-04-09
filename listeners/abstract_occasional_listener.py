@@ -19,12 +19,12 @@
 #
 # 	protected abstract void onInterestedEvent(TGEvent<String, S> event);
 # }
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 
 from listeners.abstract_listener import TGAbstractListener
 
 
-class TGAbstractOccasionalListener(ABC, TGAbstractListener):
+class TGAbstractOccasionalListener(TGAbstractListener):
     @abstractmethod
     def is_interested(self, event):
         pass

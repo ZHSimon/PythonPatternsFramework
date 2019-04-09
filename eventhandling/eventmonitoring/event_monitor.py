@@ -75,7 +75,7 @@ class TGBasicEventMonitor(TGAbstractBaseEventMonitor):
         self.listener_registry = registry.get_listener_registry()
         self.listeners = []
 
-    def are_events_pending(self):
+    def are_events_pending(self, listeners=None):
         return super().are_events_pending(self.listeners)
 
     def check_pending_event(self, event_id):
@@ -84,7 +84,7 @@ class TGBasicEventMonitor(TGAbstractBaseEventMonitor):
     def check_pending_events(self):
         return  # Do nothing - decorators will override as needed.
 
-    def is_listening_to(self, event_id):
+    def is_listening_to(self, event_id, listeners=None):
         return super().is_listening_to(self.listeners, event_id)
 
     def is_pending(self, event_id):

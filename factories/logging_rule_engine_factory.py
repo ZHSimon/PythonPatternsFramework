@@ -5,5 +5,5 @@ import logging
 
 class TGLoggingRuleEngineFactory(TGAbstractFactory):
 
-    def create(self):
+    def create(self, options=None):
         return TGLoggingRuleEngine(logging.getLogger())

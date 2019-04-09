@@ -57,7 +57,7 @@
 # }
 from enumeration.enums.abstract_representable import TGAbstractRepresentable
 from transforming.abstract_base_transformer import TGAbstractBaseTransformer
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 
 
 def create_conversion_map(known_values):
@@ -69,8 +69,9 @@ def create_conversion_map(known_values):
     return return_map
 
 
-class TGAbstractRepresentableTransformer(ABC, TGAbstractBaseTransformer):
+class TGAbstractRepresentableTransformer(TGAbstractBaseTransformer):
     def __init__(self, known_values=None, conversion_map={}):
+        super().__init__()
         self.conversion_map = conversion_map if conversion_map else create_conversion_map(known_values)
 
     def convert(self, original):

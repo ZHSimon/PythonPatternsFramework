@@ -46,7 +46,7 @@ class TGAbstractEventMonitor(ABC):
         pass
 
     @abstractmethod
-    def is_listening_to(self, event_id):
+    def is_listening_to(self, event_id, listeners=None):
         pass
 
     @abstractmethod

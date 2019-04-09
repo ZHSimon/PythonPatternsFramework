@@ -1,4 +1,4 @@
-import abc
+from abc import ABC, abstractmethod
 
 
 ##
@@ -6,7 +6,7 @@ import abc
 # Translated into Python on 3/13/2019
 #
 
-class TGEnumerator(metaclass=abc.ABCMeta):
+class TGEnumerator(ABC):
 
     # Answer whether at least one of the supplied items matches a condition.
     #
@@ -15,7 +15,7 @@ class TGEnumerator(metaclass=abc.ABCMeta):
     # @return true/false
     # <I, C extends Collection<? extends I>> boolean anySatisfy(C items, TGMatcher<I> matcher);
 
-    @abc.abstractmethod
+    @abstractmethod
     def any_satisfy(self, items, matcher):
         pass
 
@@ -31,7 +31,7 @@ class TGEnumerator(metaclass=abc.ABCMeta):
     # @return primary or alternate, may be null
     # <T> T coalesce(T primary, T alternate);
 
-    @abc.abstractmethod
+    @abstractmethod
     def coalesce(self, primary, alternate):
         pass
 
@@ -43,7 +43,7 @@ class TGEnumerator(metaclass=abc.ABCMeta):
     # @return a collection of transformed items
     # <I, O, IC extends Collection<? extends I>> List<O> collect(IC items, TGMatcher<I> criteria,
     # TGTransformer<I, O> transformer);
-    @abc.abstractmethod
+    @abstractmethod
     def collect(self, items, matcher, transformer):
         pass
 
@@ -54,7 +54,7 @@ class TGEnumerator(metaclass=abc.ABCMeta):
     # @param matcher the condition to match, must not be null
     # @return count of matches
     # <I, C extends Collection<? extends I>> int count(C items, TGMatcher<I> matcher);
-    @abc.abstractmethod
+    @abstractmethod
     def count(self, items, matcher):
         pass
 
@@ -66,7 +66,7 @@ class TGEnumerator(metaclass=abc.ABCMeta):
     # @return first matching item or defaultItem
     # <S, I extends TGApplicability<S>, C extends Collection<I>> I detectFirstApplicable(C items, S situation,
     # I defaultItem);
-    @abc.abstractmethod
+    @abstractmethod
     def detect_first_applicable(self, items, situation, default_item):
         pass
 
@@ -77,7 +77,7 @@ class TGEnumerator(metaclass=abc.ABCMeta):
     # @param defaultItem the child item when items object is empty
     # @return the first of the elements in the collection
     # <I> I firstItem(Collection<I> items, I defaultItem);
-    @abc.abstractmethod
+    @abstractmethod
     def first_item(self, items, default_item):
         pass
 
@@ -89,7 +89,7 @@ class TGEnumerator(metaclass=abc.ABCMeta):
     # @param defaultItem to use if none match
     # @return an item or the default item
     # <I, C extends Collection<? extends I>> I firstMatch(C items, TGMatcher<I> matcher, I defaultItem);
-    @abc.abstractmethod
+    @abstractmethod
     def first_match(self, items, matcher, default_item):
         pass
 
@@ -100,7 +100,7 @@ class TGEnumerator(metaclass=abc.ABCMeta):
     # @param matcher encapsulates the condition(s) to match, must not be null
     # @return true/false
     # <I, C extends Collection<? extends I>> boolean noneSatisfy(C items, TGMatcher<I> matcher);
-    @abc.abstractmethod
+    @abstractmethod
     def none_satisfy(self, items, matcher):
         pass
 
@@ -119,7 +119,7 @@ class TGEnumerator(metaclass=abc.ABCMeta):
     # @param items that need the same reaction, must not be null
     # @param reaction to the items, must not be null
     # <I, C extends Collection<? extends I>> void reactToEach(C items, TGReaction<I> reaction);
-    @abc.abstractmethod
+    @abstractmethod
     def react_to_each(self, items, reaction):
         pass
 
@@ -142,7 +142,7 @@ class TGEnumerator(metaclass=abc.ABCMeta):
     # @param onNoMatch executable to perform when non of the items match
     # <I, C extends Collection<? extends I>> void reactToFirstMatch(C items, TGMatcher<I> matcher,
     # TGReaction<I> reaction, TGExecutable onNoMatch);
-    @abc.abstractmethod
+    @abstractmethod
     def react_to_first_match(self, items, matcher, reaction, on_no_match):
         pass
 
@@ -154,7 +154,7 @@ class TGEnumerator(metaclass=abc.ABCMeta):
     # @param matcher the condition to match, must not be null
     # @param reaction to the items that matches, must not be null
     # <I, C extends Collection<? extends I>> void reactToMatches(C items, TGMatcher<I> matcher, TGReaction<I> reaction);
-    @abc.abstractmethod
+    @abstractmethod
     def react_to_matches(self, items, matcher, reaction):
         pass
 
@@ -164,7 +164,7 @@ class TGEnumerator(metaclass=abc.ABCMeta):
     # @param matcher filters the items
     # @return a collection of items that not satisfy the matcher
     # <I, IC extends Collection<? extends I>> List<I> reject(IC items, TGMatcher<? super I> matcher);
-    @abc.abstractmethod
+    @abstractmethod
     def reject(self, items, matcher):
         pass
 
@@ -174,6 +174,6 @@ class TGEnumerator(metaclass=abc.ABCMeta):
     # @param matcher filters the items
     # @return a collection of items that satisfy the matcher
     # <I, IC extends Collection<? extends I>> List<I> select(IC items, TGMatcher<? super I> matcher);
-    @abc.abstractmethod
+    @abstractmethod
     def select(self, items, matcher):
         pass

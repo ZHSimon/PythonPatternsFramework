@@ -16,10 +16,13 @@
 # }
 
 from rules.abstract_rule import TGAbstractRule
-from abc import ABC
+from abc import abstractmethod
 
 
-class TGAbstractDoNothingRule(ABC, TGAbstractRule):
+class TGAbstractDoNothingRule(TGAbstractRule):
+    @abstractmethod
+    def is_applicable(self, context=None):
+        pass
 
     def apply_to(self, context):
         pass  # Do nothing

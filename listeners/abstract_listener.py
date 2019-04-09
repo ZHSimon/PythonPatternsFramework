@@ -24,5 +24,5 @@ class TGAbstractListener(ABC):
         return self.event_id
 
     @abstractmethod
-    def on_event(self, event):
+    def on_event(self, event=None):
         pass

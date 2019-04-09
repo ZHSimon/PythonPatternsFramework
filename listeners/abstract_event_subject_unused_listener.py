@@ -19,12 +19,12 @@
 #
 # 	protected abstract void onEvent();
 # }
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 
 from listeners.abstract_listener import TGAbstractListener
 
 
-class TGAbstractEventSubjectUnusedListener(ABC, TGAbstractListener):
+class TGAbstractEventSubjectUnusedListener(TGAbstractListener):
     @abstractmethod
-    def on_event(self):
+    def on_event(self, event=None):
         pass

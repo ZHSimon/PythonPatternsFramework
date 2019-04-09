@@ -15,8 +15,14 @@
 # 	public abstract String toString();
 # }
 from rules.abstract_stateful_rule import TGAbstractStatefulRule
+from abc import abstractmethod
 
 
-class TGDoNothingStatefulRule(TGAbstractStatefulRule):
+class TGAbstractDoNothingStatefulRule(TGAbstractStatefulRule):
+
+    @abstractmethod
+    def is_applicable(self, context=None):
+        pass
+
     def apply(self):
         pass  # Do nothing.

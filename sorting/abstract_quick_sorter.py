@@ -64,10 +64,9 @@
 # 	}
 # }
 from abc import abstractmethod, ABC
-from sorting.abstract_sorter import TGAbstractSorter
 
 
-class TGAbstractQuickSorter(TGAbstractSorter, ABC):
+class TGAbstractQuickSorter(ABC):
     @abstractmethod
     def get_values(self):
         return []

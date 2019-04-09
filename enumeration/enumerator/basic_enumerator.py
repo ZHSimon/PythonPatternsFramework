@@ -1,7 +1,3 @@
-from .abstract_enumerator import TGEnumerator
-from patterns.do_nothing_executable import DEFAULT as DO_NOTHING
-
-
 # Created by Zack on 9/25/2017.
 # Translated into Python on 3/13/2019
 
@@ -130,6 +126,10 @@ from patterns.do_nothing_executable import DEFAULT as DO_NOTHING
 # 		return results;
 # 	}
 # }
+from .abstract_enumerator import TGEnumerator
+from patterns.do_nothing_executable import DEFAULT as DO_NOTHING
+
+
 class TGBasicEnumerator(TGEnumerator):
     def any_satisfy(self, items, matcher):
         for item in items:

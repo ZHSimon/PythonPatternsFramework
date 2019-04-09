@@ -34,11 +34,10 @@
 # 	protected abstract void populateContents(O source, T target);
 #
 # }
-from transforming.abstract_populator import TGAbstractPopulator
 from abc import ABC, abstractmethod
 
 
-class TGAbstractPopulatingTransformer(ABC, TGAbstractPopulator):
+class TGAbstractPopulatingTransformer(ABC):
     def convert(self, original):
         target = self.create_target()
         self.populate(original, target)

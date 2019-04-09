@@ -97,11 +97,10 @@
 # 	}
 # }
 from abc import ABC, abstractmethod
-from transforming.abstract_transformer import TGAbstractTransformer
 from enumeration.enumerator.basic_enumerator import TGBasicEnumerator
 
 
-class TGAbstractBaseTransformer(ABC, TGAbstractTransformer):
+class TGAbstractBaseTransformer(ABC):
     def __init__(self):
         self.enumerator = TGBasicEnumerator()
 

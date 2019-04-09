@@ -13,9 +13,10 @@ from abc import ABC, abstractmethod
 
 
 class TGAbstractVisitor(ABC):
-    def __init__(self):
-        self.NOTHING = None
 
     @abstractmethod
     def visit_any(self):
         pass
+
+
+NOTHING = None

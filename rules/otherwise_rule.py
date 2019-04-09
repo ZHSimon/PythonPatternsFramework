@@ -17,10 +17,15 @@
 # }
 #
 from rules.abstract_rule import TGAbstractRule
-from abc import ABC
+from abc import abstractmethod
 
 
-class TGAbstractOtherwiseRule(ABC, TGAbstractRule):
-    @staticmethod
-    def is_applicable(context=None):
+class TGAbstractOtherwiseRule(TGAbstractRule):
+
+    @abstractmethod
+    def apply_to(self, context):
+        pass
+
+    @abstractmethod
+    def is_applicable(self, context=None):
         return True

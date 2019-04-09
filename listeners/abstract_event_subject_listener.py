@@ -20,13 +20,13 @@
 # 	protected abstract void onEventHandle(S subject);
 # }
 
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 
 from listeners.abstract_listener import TGAbstractListener
 
 
-class TGAbstractEventSubjectListener(ABC, TGAbstractListener):
-    def on_event(self, event):
+class TGAbstractEventSubjectListener(TGAbstractListener):
+    def on_event(self, event=None):
         self.on_event_handle(event.get_subject())
 
     @abstractmethod

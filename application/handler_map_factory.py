@@ -21,5 +21,5 @@ from factories.abstract_factory import TGAbstractFactory
 
 
 class TGHandlerMapFactory(TGAbstractFactory):
-    def create(self):
+    def create(self, options=None):
         return {}

@@ -17,10 +17,18 @@
 # }
 
 from rules.abstract_applicable import TGAbstractApplicable
-from abc import ABC
+from abc import abstractmethod
 
 
-class TGAbstractRule(ABC, TGAbstractApplicable):
+class TGAbstractRule(TGAbstractApplicable):
+    @abstractmethod
+    def is_applicable(self, context=None):
+        pass
+
+    @abstractmethod
+    def apply_to(self, context):
+        pass
+
     def consider_applying(self, context):
         if self.is_applicable(context):
             self.apply_to(context)

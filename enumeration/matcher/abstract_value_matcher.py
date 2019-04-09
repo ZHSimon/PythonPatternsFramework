@@ -29,10 +29,10 @@
 # 	}
 # }
 from enumeration.matcher.abstract_matcher import TGAbstractMatcher
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 
 
-class TGAbstractValueMatcher(ABC, TGAbstractMatcher):
+class TGAbstractValueMatcher(TGAbstractMatcher):
     def __init__(self, values_being_matched):
         if type(values_being_matched) is not list:
             values_being_matched = [values_being_matched]

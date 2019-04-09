@@ -25,11 +25,11 @@
 # 		return isApplicable();
 # 	}
 # }
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 from rules.abstract_applicable import TGAbstractApplicable
 
 
-class TGAbstractStatefulRule(ABC, TGAbstractApplicable):
+class TGAbstractStatefulRule(TGAbstractApplicable):
 
     def consider_applying(self):
         if self.is_applicable():
@@ -40,5 +40,9 @@ class TGAbstractStatefulRule(ABC, TGAbstractApplicable):
 
     @abstractmethod
     def apply(self):
+        pass
+
+    @abstractmethod
+    def is_applicable(self, context=None):
         pass
 
