@@ -1,7 +1,5 @@
-import logging
-
 from thraxisgamespatterns.enumeration.enumerator.basic_enumerator import TGBasicEnumerator, DEFAULT
-from thraxisgamespatterns.tests.resources_for_tests import TestElement, TGElementMatcher, TGElementTransformer
+from tests.resources_for_tests import TestElement, TGElementMatcher, TGElementTransformer
 
 list_of_items = [TestElement(), TestElement("value1"), TestElement("value2"), TestElement("value3")]
 
