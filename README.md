@@ -3,73 +3,67 @@ This package is a collection of various programming patterns, adapted from Andro
 Contained within:
 
 
-    Constants interface (application.constants_interface)
+    Constants interface
 
-    Defaulting Dictionary (patterns.defaulting_dict)
+    Enumeration
 
-    Enumeration (enumeration)
+        Matchers
 
-        Matchers (enumeration.matcher.abstract_matcher)
+        Value matcher
 
-        Value matcher (enumeration.matcher.abstract_value_matcher)
+        Representables
 
-        Representables (enumeration.enums.abstract_representable)
+        Visitor Pattern
 
-        Visitor Pattern (enumeration.visitor.abstract_visitor)
-
-    Event Handling Pattern (eventhandling)
+    Event Handling Pattern
 
         Event Distributors
 
-        Event Monitors (eventhandling.eventmonitoring.event_monitor)
+        Event Monitors
 
-        Event Trackers (eventhandling.abstract_event_tracker)
+        Event Trackers
+        
+        Events
 
-        Events (eventhandling.event)
+        Reactions
 
-        Reactions (eventhandling.abstract_reaction)
+    Executable Pattern
 
-    Executable Pattern (patterns.executable)
+        Do-Nothing Executables
 
-        Do-Nothing Executables (patterns.do_nothing_executable)
+    Factory Pattern
 
-    Factory Pattern (factories)
+        Custom Factories
 
-        Custom Factories (factories.abstract_custom_factory)
+    Listener Pattern
 
-    Listener Pattern (listeners)
+        Dummy Listeners
 
-        Dummy Listeners (listeners.dummy_listener)
+        Listener Registry
 
-        Listener Registry (listeners.abstract_listener_registry)
+        Proxy Listeners
 
-        Proxy Listeners (listeners.proxy_listener)
+        Subject Listeners
 
-        Subject Listeners (abstract_event_subject_listener)
+        No-Subject Listeners
 
-        No-Subject Listener (abstract_event_subject_unused_listener)
+    Matcher Pattern
 
-    Matcher Pattern (enumeration.matcher.abstract_value_matcher)
+    Registry Pattern
 
-    Registry Pattern (application.abstract_registry)
+    Rules and Rule Engine Patterns
 
-        Context Based Registry Locator (application.base_context_registry_locator)
+        Logging Rules
 
-    Rules and Rule Engine Patterns (rules)
+        Stateful Rules
 
-        Logging Rules (rules.logging_rule_engine)
+        Rule Engines
 
-        Stateful Rules (rules.abstract_stateful_rule)
+        Basic Rules
 
-        Rule Engines (rules.rule_engine)
-
-        Basic Rules (rules.abstract_rule)
-
-    Quicksort (sorting.abstract_quick_sorter)
-
-    Transformer Pattern (transforming)
-
-        Populator Pattern (transforming.abstract_populator)
+    Transformer Pattern
+    
+        Populator Pattern
 
 
 Just extend the pattern you're looking to use, fill in the mandatory items, and there you go!
