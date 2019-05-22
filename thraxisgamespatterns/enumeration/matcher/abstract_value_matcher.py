@@ -10,7 +10,7 @@ class TGAbstractValueMatcher(TGAbstractMatcher):
         self.values_being_matched = values_being_matched
 
     def is_match(self, element):
-        return element is not None and self.values_being_matched.contains(self.get_value_to_match_from(element))
+        return element and self.get_value_to_match_from(element) in self.values_being_matched
 
     @abstractmethod
     def get_value_to_match_from(self, element):

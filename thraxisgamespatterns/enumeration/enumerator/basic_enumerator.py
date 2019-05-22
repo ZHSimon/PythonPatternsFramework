@@ -15,7 +15,7 @@ class TGBasicEnumerator(TGEnumerator):
         return False
 
     def coalesce(self, primary, alternate):
-        return primary if primary is not None else alternate
+        return primary if primary else alternate
 
     def collect(self, items, matcher: TGAbstractMatcher, transformer: TGAbstractBaseTransformer):
         results = []
