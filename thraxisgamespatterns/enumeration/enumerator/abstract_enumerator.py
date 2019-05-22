@@ -5,6 +5,10 @@ from abc import ABC, abstractmethod
 # Created by Zack on 9/25/2017.
 # Translated into Python on 3/13/2019
 #
+from thraxisgamespatterns.enumeration.matcher.abstract_matcher import TGAbstractMatcher
+from thraxisgamespatterns.eventhandling.abstract_reaction import TGAbstractReaction
+from thraxisgamespatterns.transforming.abstract_base_transformer import TGAbstractBaseTransformer
+
 
 class TGEnumerator(ABC):
 
@@ -16,7 +20,7 @@ class TGEnumerator(ABC):
     # <I, C extends Collection<? extends I>> boolean anySatisfy(C items, TGMatcher<I> matcher);
 
     @abstractmethod
-    def any_satisfy(self, items, matcher):
+    def any_satisfy(self, items, matcher: TGAbstractMatcher):
         pass
 
     # Return the first non null parameter, if no parameters are non null then
@@ -44,7 +48,7 @@ class TGEnumerator(ABC):
     # <I, O, IC extends Collection<? extends I>> List<O> collect(IC items, TGMatcher<I> criteria,
     # TGTransformer<I, O> transformer);
     @abstractmethod
-    def collect(self, items, matcher, transformer):
+    def collect(self, items, matcher: TGAbstractMatcher, transformer: TGAbstractBaseTransformer):
         pass
 
         # Answer a count of the supplied items that match the provided condition.
@@ -55,7 +59,7 @@ class TGEnumerator(ABC):
     # @return count of matches
     # <I, C extends Collection<? extends I>> int count(C items, TGMatcher<I> matcher);
     @abstractmethod
-    def count(self, items, matcher):
+    def count(self, items, matcher: TGAbstractMatcher):
         pass
 
     # Answer the first item that applies, or default item if none apply.
@@ -90,7 +94,7 @@ class TGEnumerator(ABC):
     # @return an item or the default item
     # <I, C extends Collection<? extends I>> I firstMatch(C items, TGMatcher<I> matcher, I defaultItem);
     @abstractmethod
-    def first_match(self, items, matcher, default_item):
+    def first_match(self, items, matcher: TGAbstractMatcher, default_item):
         pass
 
     # Answer whether none of the supplied items matches a condition. <br>
@@ -101,7 +105,7 @@ class TGEnumerator(ABC):
     # @return true/false
     # <I, C extends Collection<? extends I>> boolean noneSatisfy(C items, TGMatcher<I> matcher);
     @abstractmethod
-    def none_satisfy(self, items, matcher):
+    def none_satisfy(self, items, matcher: TGAbstractMatcher):
         pass
 
     # Get an arbitrary element from the supplied collection.
@@ -120,7 +124,7 @@ class TGEnumerator(ABC):
     # @param reaction to the items, must not be null
     # <I, C extends Collection<? extends I>> void reactToEach(C items, TGReaction<I> reaction);
     @abstractmethod
-    def react_to_each(self, items, reaction):
+    def react_to_each(self, items, reaction: TGAbstractReaction):
         pass
 
     # Iterate through the supplied items and perform an action on the earliest
@@ -143,7 +147,7 @@ class TGEnumerator(ABC):
     # <I, C extends Collection<? extends I>> void reactToFirstMatch(C items, TGMatcher<I> matcher,
     # TGReaction<I> reaction, TGExecutable onNoMatch);
     @abstractmethod
-    def react_to_first_match(self, items, matcher, reaction, on_no_match):
+    def react_to_first_match(self, items, matcher: TGAbstractMatcher, reaction: TGAbstractReaction, on_no_match):
         pass
 
     # Iterate through the supplied items and perform an action on the all items
@@ -155,7 +159,7 @@ class TGEnumerator(ABC):
     # @param reaction to the items that matches, must not be null
     # <I, C extends Collection<? extends I>> void reactToMatches(C items, TGMatcher<I> matcher, TGReaction<I> reaction);
     @abstractmethod
-    def react_to_matches(self, items, matcher, reaction):
+    def react_to_matches(self, items, matcher: TGAbstractMatcher, reaction: TGAbstractReaction):
         pass
 
     # Gather a list of elements that does not match a supplied criteria.
@@ -165,7 +169,7 @@ class TGEnumerator(ABC):
     # @return a collection of items that not satisfy the matcher
     # <I, IC extends Collection<? extends I>> List<I> reject(IC items, TGMatcher<? super I> matcher);
     @abstractmethod
-    def reject(self, items, matcher):
+    def reject(self, items, matcher: TGAbstractMatcher):
         pass
 
     # Gather a list of elements that match a supplied criteria.
@@ -175,5 +179,5 @@ class TGEnumerator(ABC):
     # @return a collection of items that satisfy the matcher
     # <I, IC extends Collection<? extends I>> List<I> select(IC items, TGMatcher<? super I> matcher);
     @abstractmethod
-    def select(self, items, matcher):
+    def select(self, items, matcher: TGAbstractMatcher):
         pass

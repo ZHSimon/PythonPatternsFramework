@@ -1,7 +1,7 @@
 import logging
 
-from factories.abstract_factory import TGAbstractFactory
-from rules.logging_rule_engine import TGLoggingRuleEngine
+from thraxisgamespatterns.factories.abstract_factory import TGAbstractFactory
+from thraxisgamespatterns.rules.logging_rule_engine import TGLoggingRuleEngine
 
 
 class TGLoggingRuleEngineFactory(TGAbstractFactory):

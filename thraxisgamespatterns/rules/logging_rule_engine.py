@@ -1,36 +1,4 @@
-# package com.games.thraxis.framework.rules;
-#
-# import com.games.thraxis.framework.logging.TGLogger;
-#
-# /**
-#  * Created by Zack on 10/2/2017.
-#  */
-#
-# public class TGLoggingRuleEngine extends TGBaseRuleEngine {
-#
-# 	private final String format;
-# 	private final TGLogger logger;
-#
-# 	public TGLoggingRuleEngine(TGLogger logger, String format) {
-# 		this.logger = logger;
-# 		this.format = format;
-# 	}
-#
-# 	public TGLoggingRuleEngine(TGLogger logger) {
-# 		this(logger, "Applying Rule: %s");
-# 	}
-#
-# 	@Override
-# 	protected <C> void applyRule(TGRuleCore<C> rule, C context) {
-# 		logRuleApplied(rule, context);
-# 		super.applyRule(rule, context);
-# 	}
-#
-# 	protected <C> void logRuleApplied(TGRuleCore<C> rule, C context) {
-# 		logger.info(getClass(), format, rule);
-# 	}
-# }
-from rules.rule_engine import TGBaseRuleEngine
+from thraxisgamespatterns.rules.rule_engine import TGBaseRuleEngine
 
 
 class TGLoggingRuleEngine(TGBaseRuleEngine):

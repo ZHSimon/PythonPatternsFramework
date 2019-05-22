@@ -1,18 +1,3 @@
-# package com.games.thraxis.framework.listeners;
-#
-# import com.games.thraxis.framework.eventhandling.TGEvent;
-#
-# /##
-#  # Created by Zack on 9/26/2017.
-#  #/
-#
-# public interface TGListener<S> {
-#
-# 	String getEventId();
-# 	void onEvent(TGEvent<String, S> event);
-#
-# }
-
 from abc import ABC, abstractmethod
 
 

@@ -1,39 +1,3 @@
-# package com.games.thraxis.framework.transforming;
-#
-# import java.util.List;
-#
-# /##
-#  # Created by Zack on 9/25/2017.
-#  #/
-#
-# public abstract class TGPopulatingTransformer<O, T> extends TGBaseTransformer<O, T> implements TGPopulator<O, T> {
-#
-# 	@Override
-# 	protected T convert(O original) {
-# 		T target = createTarget();
-# 		populate(original, target);
-# 		return target;
-# 	}
-#
-# 	protected abstract T createTarget();
-#
-# 	@Override
-# 	protected T defaultTransformation() { return createTarget(); }
-#
-# 	protected <E> void matchContents(List<E> source, List<E> target){
-# 		target.clear();
-# 		target.addAll(source);
-# 	}
-#
-# 	@Override
-# 	public final void populate(O source, T target){
-# 		if (source != null){
-# 			populateContents(source, target);
-# 		}
-# 	}
-# 	protected abstract void populateContents(O source, T target);
-#
-# }
 from abc import ABC, abstractmethod
 
 

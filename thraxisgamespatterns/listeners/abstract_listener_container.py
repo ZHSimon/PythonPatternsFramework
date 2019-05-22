@@ -1,16 +1,3 @@
-# package com.games.thraxis.framework.listeners;
-#
-# /##
-#  # Created by Zack on 10/10/2017.
-#  #/
-#
-# public interface TGListenerContainer {
-#
-# 	void registerListeners();
-#
-# 	void unregisterListeners();
-# }
-
 from abc import ABC, abstractmethod
 
 
