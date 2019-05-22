@@ -11,7 +11,7 @@ def test_create_registry():
     registry = TGAbstractRegistry()
     actual_rule_engine = isinstance(registry.rule_engine, TGLoggingRuleEngine)
     actual_logger = registry.logger == logging.getLogger()
-    actual_event_distributor = registry.event_distributor == TGEventDistributor(logging.getLogger())
+    actual_event_distributor = isinstance(registry.event_distributor, TGEventDistributor)
     actual_handler_map_factory = registry.handler_map_factory == {}
     print(actual_event_distributor, actual_handler_map_factory, actual_logger, actual_rule_engine)
     assert actual_event_distributor and actual_handler_map_factory and actual_logger and actual_rule_engine
