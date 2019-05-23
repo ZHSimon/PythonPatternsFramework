@@ -1,8 +1,7 @@
+from thraxisgamespatterns.enumeration.enumerator.abstract_enumerator import TGEnumerator
 from thraxisgamespatterns.enumeration.matcher.abstract_matcher import TGAbstractMatcher
 from thraxisgamespatterns.eventhandling.abstract_reaction import TGAbstractReaction
 from thraxisgamespatterns.patterns.do_nothing_executable import DEFAULT as DO_NOTHING
-
-from thraxisgamespatterns.enumeration.enumerator.abstract_enumerator import TGEnumerator
 from thraxisgamespatterns.rules.abstract_applicable import TGAbstractApplicable
 from thraxisgamespatterns.transforming.abstract_base_transformer import TGAbstractBaseTransformer
 

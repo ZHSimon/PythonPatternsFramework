@@ -1,4 +1,5 @@
 from thraxisgamespatterns.enumeration.matcher.abstract_value_matcher import TGAbstractValueMatcher
+from thraxisgamespatterns.eventhandling.abstract_reaction import TGAbstractReaction
 from thraxisgamespatterns.rules.abstract_applicable import TGAbstractApplicable
 from thraxisgamespatterns.transforming.abstract_base_transformer import TGAbstractBaseTransformer
 
@@ -34,3 +35,8 @@ class TestElementTransformed(TGAbstractApplicable):
 class TGElementTransformer(TGAbstractBaseTransformer):
     def convert(self, original: TestElement):
         return TestElementTransformed(original.value)
+
+
+class TGElementReaction(TGAbstractReaction):
+    def react_to(self, subject: TestElement):
+        subject.value = subject.value.capitalize()

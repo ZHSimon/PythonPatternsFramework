@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 
-
 ##
 # Created by Zack on 9/25/2017.
 # Translated into Python on 3/13/2019

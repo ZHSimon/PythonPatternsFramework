@@ -1,10 +1,9 @@
 import logging
 from abc import ABC
 
+from thraxisgamespatterns.application.handler_map_factory import TGHandlerMapFactory
 from thraxisgamespatterns.eventhandling.event_distributor import TGEventDistributor
 from thraxisgamespatterns.factories.logging_rule_engine_factory import TGLoggingRuleEngineFactory
-
-from thraxisgamespatterns.application.handler_map_factory import TGHandlerMapFactory
 
 
 class TGAbstractRegistry(ABC):

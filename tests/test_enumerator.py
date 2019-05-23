@@ -1,5 +1,5 @@
-from thraxisgamespatterns.enumeration.enumerator.basic_enumerator import TGBasicEnumerator, DEFAULT
-from tests.resources_for_tests import TestElement, TGElementMatcher, TGElementTransformer
+from tests.resources_for_tests import TestElement, TGElementMatcher
+from thraxisgamespatterns.enumeration.enumerator.basic_enumerator import DEFAULT
 
 list_of_items = [TestElement(), TestElement("value1"), TestElement("value2"), TestElement("value3")]
 
@@ -99,6 +99,3 @@ def test_none_satisfy_false():
     matcher = TGElementMatcher(matcher_items)
 
     assert DEFAULT.none_satisfy(list_of_items, matcher)
-
-
-

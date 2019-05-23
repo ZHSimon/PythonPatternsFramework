@@ -1,7 +1,6 @@
 from abc import abstractmethod
 
 from thraxisgamespatterns.enumeration.enums.abstract_representable import TGAbstractRepresentable
-
 from thraxisgamespatterns.transforming.abstract_base_transformer import TGAbstractBaseTransformer
 
 
